@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dump:trace": "pnpm knip --config knip.trace.ts --trace  > knip.log",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

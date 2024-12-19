@@ -3,6 +3,9 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "~/styles/Home.module.css";
 
+import exampleLocale from '@locales/test/example.json';
+import {ExampleComponent} from "~/example-component";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  console.log(exampleLocale)
   return (
     <>
       <Head>
@@ -26,6 +30,7 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
+          <ExampleComponent />
           <Image
             className={styles.logo}
             src="/next.svg"
